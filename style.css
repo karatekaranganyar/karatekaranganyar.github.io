@@ -39,6 +39,10 @@ body {
   overflow-x: hidden;
 }
 
+/* Pastikan konten di bawah loader tetap bisa di-scroll */
+body.loading { overflow: hidden; }
+body.loaded  { overflow: auto; }
+
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { display: block; max-width: 100%; }

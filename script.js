@@ -3,49 +3,32 @@
    script.js
    ============================================= */
 
-/* ---- PAGE LOADER — robust, never stuck ---- */
-(function () {
-  const MIN_MS    = 1600;
-  const MAX_MS    = 5000;
-  const startTime = Date.now();
-
-  function hideLoader() {
+/* ---- PAGE LOADER — simple timer, no window.load ---- */
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
     const loader = document.getElementById('page-loader');
-    if (!loader || loader.classList.contains('hide')) return;
-    loader.classList.add('hide');
+    if (loader) loader.classList.add('hide');
+
+    // Tampilkan hero setelah loader hilang
+    document.querySelectorAll('.hero-content .reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 150);
+    });
+
     document.body.classList.remove('loading');
     document.body.classList.add('loaded');
-    // Setelah loader hide, langsung tampilkan konten hero
-    triggerHeroReveal();
-  }
-
-  function scheduleHide() {
-    const remaining = Math.max(0, MIN_MS - (Date.now() - startTime));
-    setTimeout(hideLoader, remaining);
-  }
-
-  window.addEventListener('load', scheduleHide);
-  setTimeout(hideLoader, MAX_MS);
+  }, 1800);
 
   // Fallback gambar loader gagal load
-  document.addEventListener('DOMContentLoaded', () => {
-    const img = document.querySelector('#page-loader .loader-logo');
-    if (!img) return;
+  const img = document.querySelector('#page-loader .loader-logo');
+  if (img) {
     img.addEventListener('error', () => {
       const fallback = document.createElement('div');
       fallback.className = 'loader-kanji-fallback';
       fallback.textContent = '空';
       img.replaceWith(fallback);
     });
-  });
-
-  function triggerHeroReveal() {
-    const heroEls = document.querySelectorAll('.hero-content .reveal');
-    heroEls.forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 150);
-    });
   }
-})();
+});
 
 /* =============================================
    MAIN INIT

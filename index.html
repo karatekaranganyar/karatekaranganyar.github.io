@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INKAI Karate – Kabupaten Karanganyar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <img src="assets/img/loader.png" alt="INKAI Logo" class="loader-logo" />
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <span class="loader-text">Memuat Halaman…</span>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#beranda" class="nav-logo">
+        <div class="logo-mark">空</div>
+        <div class="logo-text">
+          <span class="logo-main">INKAI</span>
+          <span class="logo-sub">Karanganyar</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li><a href="#tentang" class="nav-link">Tentang</a></li>
+        <li><a href="#jadwal" class="nav-link">Jadwal Latihan</a></li>
+        <li><a href="#organisasi" class="nav-link">Organisasi</a></li>
+        <li><a href="#cabang" class="nav-link">Cabang</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="beranda" class="hero">
+    <div class="hero-bg">
+      <div class="hero-stripes"></div>
+      <div class="hero-circle c1"></div>
+      <div class="hero-circle c2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">Institut Karate-Do Indonesia</div>
+      <h1 class="hero-title reveal">
+        <span class="title-jp">空手道</span>
+        <span class="title-id">INKAI<br>Karanganyar</span>
+      </h1>
+      <p class="hero-tagline reveal">
+        Membentuk Karakter Unggul Melalui Semangat Bushido<br>
+        <em>Disiplin · Kehormatan · Keberanian</em>
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#tentang" class="btn-primary">Kenali Kami</a>
+        <a href="#jadwal" class="btn-outline">Jadwal Latihan</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Gulir ke Bawah</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS RIBBON -->
+  <div class="stats-ribbon">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num" data-count="12">0</span>
+        <span class="stat-label">Cabang Aktif</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="800">0</span>
+        <span class="stat-label">Anggota Terdaftar</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="45">0</span>
+        <span class="stat-label">Pelatih Bersertifikat</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="120">0</span>
+        <span class="stat-label">Medali Diraih</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="section tentang">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">Siapa Kami</p>
+        <h2 class="section-title">Tentang INKAI<br>Karanganyar</h2>
+        <div class="title-accent"></div>
+      </div>
+      <div class="tentang-grid">
+        <div class="tentang-visual">
+          <div class="visual-block">
+            <div class="kanji-display">武道</div>
+            <div class="visual-label">Budo — Jalan Ksatria</div>
+          </div>
+          <div class="visual-badge-wrap">
+            <div class="year-badge">
+              <span class="year-num">1972</span>
+              <span class="year-label">Berdiri</span>
+            </div>
+          </div>
+        </div>
+        <div class="tentang-text">
+          <p class="lead">
+            Institut Karate-Do Indonesia (INKAI) Kabupaten Karanganyar adalah organisasi karate resmi yang bernaung di bawah FORKI dan afiliasi Japan Karate Association (JKA).
+          </p>
+          <p>
+            Kami berdedikasi untuk membina atlet karate berbakat di seluruh wilayah Kabupaten Karanganyar, dari tingkat pemula hingga kompetisi nasional. Dengan filosofi Shotokan yang autentik, kami mengutamakan keseimbangan antara teknik, mental, dan karakter.
+          </p>
+          <div class="nilai-grid">
+            <div class="nilai-card">
+              <div class="nilai-icon">🥋</div>
+              <h4>Teknik</h4>
+              <p>Metode latihan JKA Shotokan yang terstruktur dan terstandarisasi</p>
+            </div>
+            <div class="nilai-card">
+              <div class="nilai-icon">🧘</div>
+              <h4>Mental</h4>
+              <p>Pembentukan karakter disiplin, fokus, dan ketangguhan jiwa</p>
+            </div>
+            <div class="nilai-card">
+              <div class="nilai-icon">🏆</div>
+              <h4>Prestasi</h4>
+              <p>Mencetak juara di tingkat daerah, nasional, hingga internasional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JADWAL LATIHAN -->
+  <section id="jadwal" class="section jadwal">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-sub">Kegiatan Rutin</p>
+        <h2 class="section-title">Jadwal Latihan</h2>
+        <div class="title-accent"></div>
+      </div>
+
+      <div class="jadwal-tabs">
+        <button class="tab-btn active" data-tab="reguler">Latihan Reguler</button>
+        <button class="tab-btn" data-tab="prestasi">Latihan Prestasi</button>
+        <button class="tab-btn" data-tab="khusus">Program Khusus</button>
+      </div>
+
+      <div class="tab-content active" id="tab-reguler">
+        <div class="jadwal-grid">
+          <div class="jadwal-card">
+            <div class="jadwal-day">Selasa</div>
+            <div class="jadwal-info">
+              <h4>Latihan Pemula (Sabuk Putih – Kuning)</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 15.30 – 17.30 WIB</span>
+                <span>📍 Dojo Utama GOR Karanganyar</span>
+              </div>
+              <div class="jadwal-tag beginner">Pemula</div>
+            </div>
+          </div>
+          <div class="jadwal-card">
+            <div class="jadwal-day">Rabu</div>
+            <div class="jadwal-info">
+              <h4>Latihan Menengah (Sabuk Hijau – Biru)</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 16.00 – 18.00 WIB</span>
+                <span>📍 Dojo Utama GOR Karanganyar</span>
+              </div>
+              <div class="jadwal-tag intermediate">Menengah</div>
+            </div>
+          </div>
+          <div class="jadwal-card">
+            <div class="jadwal-day">Jumat</div>
+            <div class="jadwal-info">
+              <h4>Latihan Lanjut (Sabuk Cokelat – Hitam)</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 16.00 – 18.30 WIB</span>
+                <span>📍 Dojo Utama GOR Karanganyar</span>
+              </div>
+              <div class="jadwal-tag advanced">Lanjut</div>
+            </div>
+          </div>
+          <div class="jadwal-card">
+            <div class="jadwal-day">Sabtu</div>
+            <div class="jadwal-info">
+              <h4>Latihan Gabungan & Sparring</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 07.00 – 10.00 WIB</span>
+                <span>📍 Lapangan GOR Karanganyar</span>
+              </div>
+              <div class="jadwal-tag all">Semua Tingkat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-prestasi">
+        <div class="jadwal-grid">
+          <div class="jadwal-card highlight">
+            <div class="jadwal-day">Senin</div>
+            <div class="jadwal-info">
+              <h4>Tim Kumite Nasional</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 16.00 – 19.00 WIB</span>
+                <span>📍 Dojo Prestasi Indoor GOR</span>
+              </div>
+              <div class="jadwal-tag prestasi">Prestasi</div>
+            </div>
+          </div>
+          <div class="jadwal-card highlight">
+            <div class="jadwal-day">Kamis</div>
+            <div class="jadwal-info">
+              <h4>Tim Kata Nasional</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 16.00 – 19.00 WIB</span>
+                <span>📍 Dojo Prestasi Indoor GOR</span>
+              </div>
+              <div class="jadwal-tag prestasi">Prestasi</div>
+            </div>
+          </div>
+          <div class="jadwal-card highlight">
+            <div class="jadwal-day">Minggu</div>
+            <div class="jadwal-info">
+              <h4>Seleksi & Evaluasi Tim</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 07.00 – 11.00 WIB</span>
+                <span>📍 Dojo Prestasi Indoor GOR</span>
+              </div>
+              <div class="jadwal-tag prestasi">Prestasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-khusus">
+        <div class="jadwal-grid">
+          <div class="jadwal-card">
+            <div class="jadwal-day special">Insidentil</div>
+            <div class="jadwal-info">
+              <h4>Ujian Kenaikan Tingkat (UKT)</h4>
+              <div class="jadwal-meta">
+                <span>⏰ Setiap 3 Bulan Sekali</span>
+                <span>📍 GOR Karanganyar</span>
+              </div>
+              <div class="jadwal-tag special">Ujian</div>
+            </div>
+          </div>
+          <div class="jadwal-card">
+            <div class="jadwal-day special">Insidentil</div>
+            <div class="jadwal-info">
+              <h4>Penataran Pelatih & Wasit</h4>
+              <div class="jadwal-meta">
+                <span>⏰ Sesuai Jadwal FORKI Jateng</span>
+                <span>📍 Berbagai Lokasi</span>
+              </div>
+              <div class="jadwal-tag special">Pelatihan</div>
+            </div>
+          </div>
+          <div class="jadwal-card">
+            <div class="jadwal-day special">Insidentil</div>
+            <div class="jadwal-info">
+              <h4>Gasshuku (Latihan Intensif)</h4>
+              <div class="jadwal-meta">
+                <span>⏰ 2x / Tahun</span>
+                <span>📍 Lokasi Ditentukan Kemudian</span>
+              </div>
+              <div class="jadwal-tag special">Intensif</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORGANISASI -->
+  <section id="organisasi" class="section organisasi">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">Kepengurusan</p>
+        <h2 class="section-title">Struktur Organisasi</h2>
+        <div class="title-accent"></div>
+        <p class="section-desc">Periode Kepengurusan 2023 – 2027</p>
+      </div>
+
+      <div class="org-chart">
+        <!-- Ketua Umum -->
+        <div class="org-level">
+          <div class="org-card top">
+            <div class="org-avatar">
+              <div class="avatar-placeholder">KU</div>
+            </div>
+            <div class="org-info">
+              <h4>H. Bambang Widodo, S.H.</h4>
+              <p>Ketua Umum</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Wakil & Sekjen -->
+        <div class="org-level two">
+          <div class="org-card">
+            <div class="org-avatar small"><div class="avatar-placeholder">WK</div></div>
+            <div class="org-info">
+              <h4>Drs. Agus Santoso</h4>
+              <p>Wakil Ketua I</p>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-avatar small"><div class="avatar-placeholder">SJ</div></div>
+            <div class="org-info">
+              <h4>Siti Rahayu, M.Pd.</h4>
+              <p>Sekretaris Jenderal</p>
+            </div>
+          </div>
+          <div class="org-card">
+            <div class="org-avatar small"><div class="avatar-placeholder">BD</div></div>
+            <div class="org-info">
+              <h4>Ir. Hendra Kusuma</h4>
+              <p>Bendahara Umum</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Bidang-bidang -->
+        <div class="org-level four">
+          <div class="org-card small-card">
+            <div class="bidang-icon">⚔️</div>
+            <h5>Bidang Pembinaan<br>Prestasi</h5>
+            <p>Tri Wahyudi, S.Pd.</p>
+          </div>
+          <div class="org-card small-card">
+            <div class="bidang-icon">🎓</div>
+            <h5>Bidang Pendidikan<br>& Pelatihan</h5>
+            <p>Nugroho Adi, Dan IV</p>
+          </div>
+          <div class="org-card small-card">
+            <div class="bidang-icon">🌐</div>
+            <h5>Bidang Humas<br>& Informasi</h5>
+            <p>Andika Putra, S.Kom.</p>
+          </div>
+          <div class="org-card small-card">
+            <div class="bidang-icon">💰</div>
+            <h5>Bidang Dana<br>& Usaha</h5>
+            <p>Dewi Lestari, M.M.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CABANG -->
+  <section id="cabang" class="section cabang">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-sub">Jaringan Kami</p>
+        <h2 class="section-title">Daftar Cabang</h2>
+        <div class="title-accent"></div>
+        <p class="section-desc" style="color:#ccc;">12 Cabang Aktif di Kabupaten Karanganyar</p>
+      </div>
+
+      <div class="cabang-filter">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="utara">Wilayah Utara</button>
+        <button class="filter-btn" data-filter="selatan">Wilayah Selatan</button>
+        <button class="filter-btn" data-filter="timur">Wilayah Timur</button>
+        <button class="filter-btn" data-filter="barat">Wilayah Barat</button>
+      </div>
+
+      <div class="cabang-grid" id="cabangGrid">
+        <div class="cabang-card" data-wilayah="barat">
+          <div class="cabang-num">01</div>
+          <div class="cabang-body">
+            <h4>Cabang Karanganyar Kota</h4>
+            <p class="cabang-lokasi">📍 GOR Pringgodani, Karanganyar</p>
+            <p class="cabang-pelatih">👤 Pelatih: Suharto, Dan III</p>
+            <div class="cabang-stats">
+              <span>85 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="barat">
+          <div class="cabang-num">02</div>
+          <div class="cabang-body">
+            <h4>Cabang Jaten</h4>
+            <p class="cabang-lokasi">📍 Lapangan Jaten, Karanganyar</p>
+            <p class="cabang-pelatih">👤 Pelatih: Wahyu Prasetyo, Dan II</p>
+            <div class="cabang-stats">
+              <span>62 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="utara">
+          <div class="cabang-num">03</div>
+          <div class="cabang-body">
+            <h4>Cabang Gondangrejo</h4>
+            <p class="cabang-lokasi">📍 Balai Desa Gondangrejo</p>
+            <p class="cabang-pelatih">👤 Pelatih: Budi Setiawan, Dan II</p>
+            <div class="cabang-stats">
+              <span>54 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="utara">
+          <div class="cabang-num">04</div>
+          <div class="cabang-body">
+            <h4>Cabang Colomadu</h4>
+            <p class="cabang-lokasi">📍 GOR Colomadu</p>
+            <p class="cabang-pelatih">👤 Pelatih: Agus Wibowo, Dan III</p>
+            <div class="cabang-stats">
+              <span>70 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="timur">
+          <div class="cabang-num">05</div>
+          <div class="cabang-body">
+            <h4>Cabang Matesih</h4>
+            <p class="cabang-lokasi">📍 Lapangan Matesih</p>
+            <p class="cabang-pelatih">👤 Pelatih: Joko Susilo, Dan II</p>
+            <div class="cabang-stats">
+              <span>48 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="timur">
+          <div class="cabang-num">06</div>
+          <div class="cabang-body">
+            <h4>Cabang Karangpandan</h4>
+            <p class="cabang-lokasi">📍 Dojo Karangpandan</p>
+            <p class="cabang-pelatih">👤 Pelatih: Rudi Hartono, Dan III</p>
+            <div class="cabang-stats">
+              <span>67 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="timur">
+          <div class="cabang-num">07</div>
+          <div class="cabang-body">
+            <h4>Cabang Tawangmangu</h4>
+            <p class="cabang-lokasi">📍 Lapangan Tawangmangu</p>
+            <p class="cabang-pelatih">👤 Pelatih: Eko Prasetyo, Dan II</p>
+            <div class="cabang-stats">
+              <span>43 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="timur">
+          <div class="cabang-num">08</div>
+          <div class="cabang-body">
+            <h4>Cabang Ngargoyoso</h4>
+            <p class="cabang-lokasi">📍 Balai Desa Ngargoyoso</p>
+            <p class="cabang-pelatih">👤 Pelatih: Slamet Riyadi, Dan I</p>
+            <div class="cabang-stats">
+              <span>35 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="selatan">
+          <div class="cabang-num">09</div>
+          <div class="cabang-body">
+            <h4>Cabang Tasikmadu</h4>
+            <p class="cabang-lokasi">📍 GOR Tasikmadu</p>
+            <p class="cabang-pelatih">👤 Pelatih: Heri Santoso, Dan II</p>
+            <div class="cabang-stats">
+              <span>58 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="selatan">
+          <div class="cabang-num">10</div>
+          <div class="cabang-body">
+            <h4>Cabang Jatipuro</h4>
+            <p class="cabang-lokasi">📍 Lapangan Jatipuro</p>
+            <p class="cabang-pelatih">👤 Pelatih: Darmanto, Dan II</p>
+            <div class="cabang-stats">
+              <span>41 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="selatan">
+          <div class="cabang-num">11</div>
+          <div class="cabang-body">
+            <h4>Cabang Jumapolo</h4>
+            <p class="cabang-lokasi">📍 Balai Jumapolo</p>
+            <p class="cabang-pelatih">👤 Pelatih: Suparno, Dan II</p>
+            <div class="cabang-stats">
+              <span>37 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+        <div class="cabang-card" data-wilayah="barat">
+          <div class="cabang-num">12</div>
+          <div class="cabang-body">
+            <h4>Cabang Kebakkramat</h4>
+            <p class="cabang-lokasi">📍 GOR Kebakkramat</p>
+            <p class="cabang-pelatih">👤 Pelatih: Warsono, Dan III</p>
+            <div class="cabang-stats">
+              <span>55 Anggota</span>
+              <span class="badge-aktif">Aktif</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">空</div>
+          <div>
+            <div class="logo-main">INKAI</div>
+            <div class="logo-sub">Kabupaten Karanganyar</div>
+          </div>
+        </div>
+        <p>Institut Karate-Do Indonesia<br>Pengurus Cabang Kabupaten Karanganyar</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#jadwal">Jadwal Latihan</a>
+        <a href="#organisasi">Organisasi</a>
+        <a href="#cabang">Cabang</a>
+      </div>
+      <div class="footer-contact">
+        <h5>Kontak</h5>
+        <p>📍 GOR Pringgodani, Jl. Lawu No. 1,<br>Karanganyar, Jawa Tengah 57716</p>
+        <p>📞 (0271) 495-xxx</p>
+        <p>✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86efe8ede7efa8ede7f4e7e8e1e7e8ffe7f4c6e1ebe7efeaa8e5e9eb">[email&#160;protected]</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 IN

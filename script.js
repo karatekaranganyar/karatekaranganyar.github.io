@@ -6,22 +6,40 @@
 /* =============================================
    PAGE LOADER
    ============================================= */
-window.addEventListener('load', () => {
-  // Minimum display time so loader feels intentional
-  const minTime = 1900;
-  const startTime = performance.now();
+/* ---- PAGE LOADER — robust, never stuck ---- */
+(function () {
+  const MIN_MS    = 1800;
+  const MAX_MS    = 4000; // failsafe ceiling
+  const startTime = Date.now();
 
   function hideLoader() {
-    const elapsed = performance.now() - startTime;
-    const remaining = Math.max(0, minTime - elapsed);
-    setTimeout(() => {
-      const loader = document.getElementById('page-loader');
-      if (loader) loader.classList.add('hide');
-    }, remaining);
+    const loader = document.getElementById('page-loader');
+    if (loader) loader.classList.add('hide');
   }
 
-  hideLoader();
-});
+  function scheduleHide() {
+    const remaining = Math.max(0, MIN_MS - (Date.now() - startTime));
+    setTimeout(hideLoader, remaining);
+  }
+
+  // Primary trigger
+  window.addEventListener('load', scheduleHide);
+
+  // Failsafe: always hide after MAX_MS regardless of asset errors
+  setTimeout(hideLoader, MAX_MS);
+
+  // If loader image itself fails, swap to kanji so layout stays intact
+  document.addEventListener('DOMContentLoaded', () => {
+    const img = document.querySelector('#page-loader .loader-logo');
+    if (!img) return;
+    img.addEventListener('error', () => {
+      const fallback = document.createElement('div');
+      fallback.className = 'loader-kanji-fallback';
+      fallback.textContent = '空';
+      img.replaceWith(fallback);
+    });
+  });
+})();
 
 /* =============================================
    MAIN INIT

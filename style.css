@@ -86,6 +86,11 @@ img { display: block; max-width: 100%; }
   font-size: .72rem; letter-spacing: 4px;
   text-transform: uppercase; color: var(--mid-gray);
 }
+.loader-kanji-fallback {
+  font-family: var(--font-jp);
+  font-size: 5rem; color: var(--red); line-height: 1;
+  animation: loaderPulse 1.4s ease-in-out infinite;
+}
 @keyframes loaderPulse {
   0%, 100% { transform: scale(1);    opacity: .9; }
   50%       { transform: scale(1.08); opacity: 1;  }

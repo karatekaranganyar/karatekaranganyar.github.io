@@ -3,18 +3,20 @@
    script.js
    ============================================= */
 
-/* =============================================
-   PAGE LOADER
-   ============================================= */
 /* ---- PAGE LOADER — robust, never stuck ---- */
 (function () {
-  const MIN_MS    = 1800;
-  const MAX_MS    = 4000; // failsafe ceiling
+  const MIN_MS    = 1600;
+  const MAX_MS    = 5000;
   const startTime = Date.now();
 
   function hideLoader() {
     const loader = document.getElementById('page-loader');
-    if (loader) loader.classList.add('hide');
+    if (!loader || loader.classList.contains('hide')) return;
+    loader.classList.add('hide');
+    document.body.classList.remove('loading');
+    document.body.classList.add('loaded');
+    // Setelah loader hide, langsung tampilkan konten hero
+    triggerHeroReveal();
   }
 
   function scheduleHide() {
@@ -22,13 +24,10 @@
     setTimeout(hideLoader, remaining);
   }
 
-  // Primary trigger
   window.addEventListener('load', scheduleHide);
-
-  // Failsafe: always hide after MAX_MS regardless of asset errors
   setTimeout(hideLoader, MAX_MS);
 
-  // If loader image itself fails, swap to kanji so layout stays intact
+  // Fallback gambar loader gagal load
   document.addEventListener('DOMContentLoaded', () => {
     const img = document.querySelector('#page-loader .loader-logo');
     if (!img) return;
@@ -39,6 +38,13 @@
       img.replaceWith(fallback);
     });
   });
+
+  function triggerHeroReveal() {
+    const heroEls = document.querySelectorAll('.hero-content .reveal');
+    heroEls.forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 150);
+    });
+  }
 })();
 
 /* =============================================
@@ -86,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- REVEAL ON SCROLL ---- */
+  /* ---- REVEAL ON SCROLL (section lain selain hero) ---- */
   const revealTargets = document.querySelectorAll(
     '.org-card, .jadwal-card, .cabang-card, .nilai-card, .section-header, .tentang-visual, .tentang-text'
   );
@@ -95,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const siblings = Array.from(entry.target.parentElement.children);
-        const idx = siblings.indexOf(entry.target);
-        const delay = Math.min(idx * 75, 400);
+        const idx      = siblings.indexOf(entry.target);
+        const delay    = Math.min(idx * 75, 400);
         setTimeout(() => entry.target.classList.add('visible'), delay);
         revealObserver.unobserve(entry.target);
       }
@@ -106,12 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
   revealTargets.forEach(el => {
     el.classList.add('reveal');
     revealObserver.observe(el);
-  });
-
-  /* ---- HERO ENTRANCE ANIMATION ---- */
-  const heroEls = document.querySelectorAll('.hero-content .reveal');
-  heroEls.forEach((el, i) => {
-    setTimeout(() => el.classList.add('visible'), 2100 + i * 180);
   });
 
   /* ---- STATS COUNTER ---- */
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function animateCount(el, target) {
     const duration = 1800;
-    const start = performance.now();
+    const start    = performance.now();
     const tick = (now) => {
       const progress = Math.min((now - start) / duration, 1);
       const eased    = 1 - Math.pow(1 - progress, 3);
@@ -169,7 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - 70,
+        behavior: 'smooth'
+      });
     });
   });
 
